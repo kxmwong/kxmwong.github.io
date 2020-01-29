@@ -1,4 +1,17 @@
 h1{
-  color:#32a852
+  color:#32a852;
+  color:rbg(50,168,82);
+  font-size:10vh
+}
 
+.blueText{
+  color:blue;
+  font-family: 'Bangers', cursive;
+}
+body{
+  background: yellow
+}
+
+img{
+  width: 50%;
 }
