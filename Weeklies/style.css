@@ -11,9 +11,9 @@ h2{
 }
 
 body{
-  background: #cdf7d1
+  background-color: #cdf7d1
 }
 
 .blueText{
-  color: yellowText
+  color: blue;
 }
