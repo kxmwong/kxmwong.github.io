@@ -4,6 +4,12 @@ h1{
     font-family: 'Sigmar One', cursive;
 }
 
+h2{
+  color: #e36fa9;
+  font-size:2vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .yellowText{
   color: yellowText
 }
