@@ -1,0 +1,15 @@
+h1{
+  color: #e68c0e;
+  font-size: 5vh;
+    font-family: 'Sigmar One', cursive;
+}
+
+h2{
+  color: #e36fa9;
+  font-size: 2vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  background-color: #cdf7d1
+}
