@@ -1,17 +1,40 @@
+/* THIS IS FOR THE TITLE PAGE */
+
 h1{
   color:#32a852;
   color:rbg(50,168,82);
-  font-size:10vh
+  font-size:10vh;
+}
+
+a{
+  color:#f0f725;
+  font-size: 20px;
+}
+
+p{
+
 }
 
 .blueText{
   color:blue;
   font-family: 'Bangers', cursive;
 }
+
 body{
-  background: yellow
+  background-image:url("MulanBackground.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 img{
-  width: 50%;
+  width: 25%;
+}
+
+.red {
+
+}
+
+.gnome{
+  float: right;
 }

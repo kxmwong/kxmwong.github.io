@@ -1,3 +1,5 @@
+/* THIS IS FOR THE WEEKLY GENERAL PAGE */
+
 h1{
   color: #e68c0e;
   font-size: 5vh;
@@ -16,4 +18,11 @@ body{
 
 .blueText{
   color: #0000ff;
+}
+
+body{
+  background-image:url("Lilo&Stitch.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
