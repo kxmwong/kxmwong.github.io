@@ -1,6 +1,6 @@
 h1{
   color: #e68c0e;
-  font-size: 5vh;
+  font-size: 11vh;
     font-family: 'Sigmar One', cursive;
 }
 
@@ -12,4 +12,8 @@ h2{
 
 body{
   background-color: #cdf7d1
+}
+
+.greenText{
+  color: greenText;
 }
