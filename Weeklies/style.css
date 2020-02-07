@@ -2,7 +2,7 @@
 
 h1{
   color: #e68c0e;
-  font-size: 5vh;
+  font-size: 10vh;
     font-family: 'Sigmar One', cursive;
 }
 
@@ -25,4 +25,14 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+a{
+  color: #b7cced;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+img{
+  
 }
