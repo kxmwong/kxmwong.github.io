@@ -1,0 +1,48 @@
+body{
+  background-image:url("Home Page-01.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.homebutton{
+  color: white;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  padding: 20px 20px;
+  background-color: #CAAD51;
+  margin: 15% 40px;
+
+}
+
+.Videobutton{
+  color: white;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  padding: 20px 20px;
+  background-color: #E4A3A1;
+  margin: 15% 40px;
+}
+
+.photobutton{
+  color: white;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  padding: 20px 20px;
+  background-color: #E56969;
+  margin: 15% 40px;
+}
+
+.illustrationbutton{
+  color: white;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  padding: 20px 20px;
+  background-color: #E56969;
+  margin: 15% 40px;
+  float: right;
+}
