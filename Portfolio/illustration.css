@@ -1,0 +1,64 @@
+body{
+  background-image:url("Home Page-01.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.navButton {
+  width: 16.6%;
+  height: 80px;
+  float: left;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 25px;
+}
+
+#homebutton{
+    background-color: #CAAD51;
+}
+
+#videobutton{
+      background-color: #E4A3A1;
+}
+
+#photobutton{
+  background-color: #E56969;
+}
+
+#illustrationbutton{
+    background-color: #264929;
+}
+
+#buttontroycamp{
+  background-color: #D9B955;
+}
+
+#buttonaboutme{
+  background-color: #E8B5B2;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+    color: green;
+}
+
+#shoe{
+width: 700px;
+padding-right: 60px;
+padding-bottom: 300px;
+}
+
+#girl{
+  width: 500px;
+  padding-bottom: 200px;
+}
+
+.Designs{
+  text-align: center;
+  padding-top: 200px;
+}

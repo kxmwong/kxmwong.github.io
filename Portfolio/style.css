@@ -70,3 +70,12 @@ body{
 h1{
   font-size: ;
 }
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+    color: green;
+}
