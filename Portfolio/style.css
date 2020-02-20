@@ -5,44 +5,68 @@ body{
   background-size: cover;
 }
 
+.leftbuttons{
+  float:left;
+  height: 800px;
+  width: 300px;
+  height: 200px;
+}
+
+.rightbuttons{
+  float:right;
+  width: 300px;
+  height: 200px;
+}
+
 .homebutton{
-  color: white;
-  text-align: center;
-  width: 200px;
-  height: 50px;
-  padding: 20px 20px;
+
   background-color: #CAAD51;
-  margin: 15% 40px;
 
 }
 
 .Videobutton{
-  color: white;
-  text-align: center;
-  width: 200px;
-  height: 50px;
-  padding: 20px 20px;
+
   background-color: #E4A3A1;
-  margin: 15% 40px;
 }
 
 .photobutton{
-  color: white;
-  text-align: center;
-  width: 200px;
-  height: 50px;
-  padding: 20px 20px;
+
   background-color: #E56969;
-  margin: 15% 40px;
 }
 
 .illustrationbutton{
+
+  background-color: #264929;
+}
+
+.troycamp{
+
+  background-color: #D9B955;
+}
+
+.aboutme{
+
+  background-color: #E8B5B2;
+}
+
+.button{
   color: white;
   text-align: center;
   width: 200px;
   height: 50px;
   padding: 20px 20px;
-  background-color: #E56969;
-  margin: 15% 40px;
-  float: right;
+  margin: 15vh 40px;
+}
+
+.name{
+  position: absolute;
+  top:25%;
+  left:25%;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  font-size: 200%;
+}
+h1{
+  font-size: ;
 }
