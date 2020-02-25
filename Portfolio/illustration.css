@@ -5,9 +5,16 @@ body{
   background-size: cover;
 }
 
-.navButton {
-  width: 16.6%;
+.navBar{
   height: 80px;
+  width: 100%;
+  display: flex;
+}
+
+.navButton {
+  width: 17%;
+  height: 80px;
+  flex-grow: 1;
   float: left;
   text-align: center;
   font-size: 25px;
