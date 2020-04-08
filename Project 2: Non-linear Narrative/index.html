@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="content">
+        <img id = "night"src="house.png" alt="">
+
+        <div class="description">
+          It's late at night and you need something to do! You try to do your
+          homework, but just can't seem to sit still. What are you going to do?
+        </div>
+
+        <div class="optionA">
+          Keep doing homework. PUSH THROUGH, SCHOOL IS STILL A CONCEPT.
+        </div>
+
+        <div class="optionB">
+          Grab a snack!
+        </div>
+
+        <div class="optionC">
+          Maybe watch something?
+        </div>
+
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    var desc = document.querySelector(".description");
+    var a = document.querySelector(".optionA");
+    var b = document.querySelector(".optionB");
+    var c = document.querySelector(".optionC");
+    var bg = document.querySelector("#night");
+    var i = 0;
+
+    var descArray = new Array;
+    descArray[0]= "Congratulations! You're Baljeet! A's for days baby.";
+    descArray[1]= "You go the kitchen. What do you grab to eat?";
+    descArray[2]="What do you watch?";
+    descArray[3]="Wow, healthy! You get a BURST of energy from all this nutrition. What're you going to do with it?";
+    descArray[4]="You're Augustis Gloop. I can't believe you really ate the whole cake."
+    descArray[5]="Okay, so what are you gonna cook?"
+    descArray[6]="Congrats! You're a basic college student. We're all iconic in our own way."
+    descArray[7]="You ARE Babish. Ain't nobody else got the time, money, or materials to do that recreationally."
+    descArray[8]="Roz. Don't forget to remind Wazowski that he didn't file his paperwork on time..."
+    descArray[9]="Which episode of The Office is the best? (There IS a rigt answer.)"
+    descArray[10]="WRONG. You are nothing."
+    descArray[11]="WRONG. You'd get a Dundie for how un-iconic you are."
+    descArray[12]="Hmmmmm... ok you SEEM to have good taste and really know The Office. But NOW THIS IS A TEST. PROVE YOU ARE WORTHY OF THE SHOW. What was the cringiest couple in the show?"
+    descArray[13]="You're Angle Martin. You're just jealous of Oscar and the Senator's love."
+    descArray[14]="You're Andy Bernard. Are you angry that Gabe stole your girlfriend over the summer? No! You've been through anger management..."
+    descArray[15]="CORRECT; The AUDACITY of Michael to date Pam's MOTHER???? DISGUSTING. Final test: How did Michael burn his foot?"
+    descArray[16]="WRONG. That was PAM you idiot. No iconic character for you, booooooo."
+    descArray[17]="WRONG, that wasn't even a REAL SCENE. Oh what's that? You HAVEN'T watched The Office fully through at least 6 times and do remember every single scene? UNICONIC."
+    descArray[18]="YES! You are Dwight Schrute. No one knows Michael better than you. Not even Holly."
+    descArray[19]="Okay, now that you feel nourished, what are you gonna do?"
+    descArray[20]="Yep, you're Leslie Knope. It's late as hell, but you don't need more than 2 minutes of sleep. You have SO MUCH FUN WORK TO DO!!!"
+    descArray[21]="What accessory do you bring?"
+    descArray[22]="IT STARTED WHEN AN ALIEN DEVICE DID WHAT IT DID, AND STUCK ITSELF UPON HIS WRIST WITH SECRETS THAT IT HID. NOW HE'S GOT SUPER POWERS, HE'S NO ORDINARY KID. HE'S BEN 10."
+    descArray[23]="You're definitely Iron Man. Genius, billionaire, playboy, philanthropist."
+    descArray[24]="What is your weapon of choice?"
+    descArray[25]="*cue theme song* PERRY!!! HE'S A SEMIAQUATIC EGG LAYIN' MAMMAL OF ACTION, HE'S A FURRY LITTLE FLATFOOR WHO'LL NEVER FLINCH FROM A FRA-EEAY-EEAYYY"
+    descArray[26]="You're Peter the Panda!"
+    descArray[27]="You're Dwight Shrute. Lackawanna County volunteer sheriff's deputy at your service."
+    descArray[28]="First you must pick your outfit! What do you choose?"
+    descArray[29]="You're Dr. Doofenschmirtz! Doofenschmirtz evil incorporrraaaattteeeeeedd!!!"
+    descArray[30]="You're Cruella de Vil. You really be skinning those dogs for your ugly jacket..."
+    descArray[31]="You're Yzma.... You're so old and wrinkly you're living proof that dinosaurs once roamed the earth. Bleh."
+    descArray[32]="You're Chris Traeger! Your body is a microchip. It cannot be compromised. You've run 10 miles a day, every day, for 18 years. That's 65,000 miles. A third of the way to the Moon. Your goal is to run to the moon."
+    descArray[33]="You're Buster!!! Aw, look at the cute little friendship you guys have."
+    descArray[34]="You're Phineas and Ferb! Hey? Where's Perry?"
+    descArray[35]= "You're Mr. Pricklepants! Unlike these other toys, you've been classically trained in acting."
+
+    var optA = new Array;
+    optA[0]= "I don't watch, I CREATE."
+    optA[1]= "Banana, granola, and yogurt, allllll mixed together!"
+    optA[2]= "PASTA, BABY"
+    optA[3]= "Might as well workout and go on a casual 10 mile run!"
+    optA[4]= "Go back and finish my work!"
+    optA[5]= "A fedora."
+    optA[6]= "Your beaver tail."
+    optA[7]= "A lab coat."
+    optA[8]= "Dinner Party"
+    optA[9]= "Oscar Martinez and Robert Lipton (aka ~The Senator~)"
+    optA[10]= "Running across hot coals during your branch's retreat because everyone in the office dared you to."
+
+    var optB = new Array;
+    optB[0]= "Chocolate cake!"
+    optB[1]= "I'm going to watch an episode of Binging with Babish and recreate the 'Kung Fu Panda Secret Ingredient Noodle Soup' with my own bare hands! https://www.youtube.com/watch?v=cee6883w2Nk"
+    optB[2]= "Fight crime. It's late. Now is the perfect time to strike."
+    optB[3]= "A fancy lil' watch-gadget-thingy."
+    optB[4]= "Your fuzzy lil' bear paws."
+    optB[5]= "The skin of your enemies."
+    optB[6]= "YOU. I'm watching you... Always watching..."
+    optB[7]= "Build a rocket... fight a mummy... climb up the Eiffel Tower... discover something that doesn't exist... or give a monkey a shower?"
+    optB[8]= "Threat Level Midnight"
+    optB[9]= "Gabe Lewis and Erin Hannon"
+    optB[10]= "Spilled boiling chili on his foot during dinner."
+
+    var optC = new Array;
+    optC[0]= "The Office"
+    optC[1]= "The Dundies"
+    optC[2]= "Michael Scott and Helene Beesly"
+    optC[3]= "Stepped on a grill he keeps next to his bed while it was cooking bacon."
+    optC[4]= "I'm cooking a FULL ON MEAL, BABY!"
+    optC[5]= "Pull up to your best friend Arthur's house with matching slippers because you feel bad for stealing a fossil from the museum you visted on your class field trip and need a best friend's advice. "
+    optC[6]= "Tomato and Egg Stir-fry (it's a chinese thing :))"
+    optC[7]= "Commit a crime. It's late. Now is the perfect time to strike."
+    optC[8]= "All the accessories, a high tech suit, hella gadgets, EVERYTHING."
+    optC[9]= "Beets."
+    optC[10]= "An long purple dress that does not fit your old, wrinkly, body well. But hey,at least it comes with a matching purple headband."
+
+    var bgName = new Array;
+    bgName[0]=
+
+    function chooseA(){
+      //if the text of the desc div has the word night in it and 0 choices have been made, change the desc to baljeet
+      if(desc.innerHTML.indexOf("night") >= -1 && i == 0){
+        desc.innerHTML = descArray[0];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        bg.src = "";
+        // i == 1 means you've already made 1 choice
+        // Choose B, then A
+      }else if(desc.innerHTML.indexOf("kitchen") >= -1 && i == 1){
+        desc.innerHTML = descArray[3];
+        a.innerHTML = optA[1];
+        b.innerHTML = optB[0];
+        c.innerHTML = optC[4];
+        // Choose C, then A, END
+      }else if(desc.innerHTML.indexOf("watch") >= -1 && i == 1){
+        desc.innerHTML = descArray[35];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose B, then A, then A, END
+      } else if(desc.innerHTML.indexOf("BURST") >= -1 && i == 2){
+        desc.innerHTML = descArray[32];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose B, then C, then A, END
+      } else if(desc.innerHTML.indexOf("cook") >= -1 && i == 2){
+        desc.innerHTML = descArray[6];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose B, then C, then C, then A, END
+      } else if(desc.innerHTML.indexOf("nourished") >= -1 && i == 3){
+        desc.innerHTML = descArray[20];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose B, then C, then C, then B, then A
+      } else if(desc.innerHTML.indexOf("accessory") >= -1 && i == 4){
+        desc.innerHTML = descArray[24];
+        a.innerHTML = optA[6];
+        b.innerHTML = optB[4];
+        c.innerHTML = optC[9];
+        // Choose B, then C, then C, then B, then A, then A, END
+      } else if(desc.innerHTML.indexOf("weapon") >= -1 && i == 5){
+        desc.innerHTML = descArray[25];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose B, then C, then C, then C, then A, END
+      } else if(desc.innerHTML.indexOf("outfit") >= -1 && i == 4){
+        desc.innerHTML = descArray[29];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose C, then C, then A
+      } else if(desc.innerHTML.indexOf("outfit") >= -1 && i == 2){
+        desc.innerHTML = descArray[29];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose C, then C, then A, then A, END
+      } else if(desc.innerHTML.indexOf("cringiest") >= -1 && i == 3){
+        desc.innerHTML = descArray[13];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose C, then C, then A, then C, then A, END
+      } else if(desc.innerHTML.indexOf("AUDACITY") >= -1 && i == 4){
+        desc.innerHTML = descArray[16];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+
+    }
+    // any function where B is the last choice
+    function chooseB(){
+      if(desc.innerHTML.indexOf("night") >= -1 && i == 0){
+        desc.innerHTML = descArray[1];
+        // Choose B, then C, then C, then B
+      } else if(desc.innerHTML.indexOf("nourished") >= -1 && i == 3){
+        desc.innerHTML = descArray[19];
+        a.innerHTML = optA[4];
+        b.innerHTML = optB[2];
+        c.innerHTML = optC[7];
+        // Choose B, then B, END
+      } else if(desc.innerHTML.indexOf("kitchen") >= -1 && i == 1){
+        desc.innerHTML = descArray[4];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose B, then C, then B, END
+      }else if(desc.innerHTML.indexOf("cook") >= -1 && i == 2){
+        desc.innerHTML = descArray[7];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose B, then C, then B, END
+      }else if(desc.innerHTML.indexOf("cook") >= -1 && i == 2){
+        desc.innerHTML = descArray[7];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose B, then C, then C, then B
+      }else if(desc.innerHTML.indexOf("nourished") >= -1 && i == 3){
+        desc.innerHTML = descArray[21];
+        a.innerHTML = optA[5];
+        b.innerHTML = optB[3];
+        c.innerHTML = optC[8];
+        // Choose B, then C, then C, then B, then B, END
+      }else if(desc.innerHTML.indexOf("accessory") >= -1 && i == 4){
+        desc.innerHTML = descArray[22];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose B, then C, then C, then B, then A, then B, END
+      }else if(desc.innerHTML.indexOf("weapon") >= -1 && i == 5){
+        desc.innerHTML = descArray[26];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose B, then C, then C, then C, then B, END
+      }else if(desc.innerHTML.indexOf("outfit") >= -1 && i == 4){
+        desc.innerHTML = descArray[30];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose C, then B, END
+      }else if(desc.innerHTML.indexOf("watch") >= -1 && i == 1){
+        desc.innerHTML = descArray[8];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose C, then C, then B, END
+      }else if(desc.innerHTML.indexOf("best") >= -1 && i == 2){
+        desc.innerHTML = descArray[10];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose C, then C, then A, then B, END
+      }else if(desc.innerHTML.indexOf("watch") >= -1 && i == 3){
+        desc.innerHTML = descArray[14];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+        // Choose C, then C, then A, then C, then B, END
+      }else if(desc.innerHTML.indexOf("AUDACITY") >= -1 && i == 4){
+        desc.innerHTML = descArray[17];
+        a.innerHTML = "";
+        b.innerHTML = "";
+        c.innerHTML = "";
+      }
+    }
+
+  }
+  // any function where C is the last choice
+  function chooseC(){
+    if(desc.innerHTML.indexOf("night") >= -1 && i == 0){
+      desc.innerHTML = descArray[1];
+      // Choose B, then C
+    } else if(desc.innerHTML.indexOf("kitchen") >= -1 && i == 1){
+      desc.innerHTML = descArray[5];
+      a.innerHTML = optA[2];
+      b.innerHTML = optB[1];
+      c.innerHTML = optC[6];
+      // Choose B, then C, then C
+    } else if(desc.innerHTML.indexOf("cook") >= -1 && i == 2){
+      desc.innerHTML = descArray[19];
+      a.innerHTML = optA[4];
+      b.innerHTML = optB[2];
+      c.innerHTML = optC[7];
+      // Choose B, then C, then C, then C
+    } else if(desc.innerHTML.indexOf("nourished") >= -1 && i == 3){
+      desc.innerHTML = descArray[28];
+      a.innerHTML = optA[7];
+      b.innerHTML = optB[5];
+      c.innerHTML = optC[10];
+      // Choose B, then C, then C, then C, then C, END
+    } else if(desc.innerHTML.indexOf("outfit") >= -1 && i == 4){
+      desc.innerHTML = descArray[31];
+      a.innerHTML = "";
+      b.innerHTML = "";
+      c.innerHTML = "";
+      // Choose B, then C, then C, then B, then C, END
+    } else if(desc.innerHTML.indexOf("accessory") >= -1 && i == 4){
+      desc.innerHTML = descArray[23];
+      a.innerHTML = "";
+      b.innerHTML = "";
+      c.innerHTML = "";
+      // Choose C, then C
+    } else if(desc.innerHTML.indexOf("watch") >= -1 && i == 1){
+      desc.innerHTML = descArray[9];
+      a.innerHTML = optA[8];
+      b.innerHTML = optB[8];
+      c.innerHTML = optC[1];
+      // Choose C, then C, then A, then C
+    } else if(desc.innerHTML.indexOf("cringiest") >= -1 && i == 3){
+      desc.innerHTML = descArray[15];
+      a.innerHTML = optA[10];
+      b.innerHTML = optB[10];
+      c.innerHTML = optC[3];
+      // Choose C, then C, then C, END
+    } else if(desc.innerHTML.indexOf("episode") >= -1 && i == 2){
+      desc.innerHTML = descArray[11];
+      a.innerHTML = "";
+      b.innerHTML = "";
+      c.innerHTML = "";
+      // Choose C, then C, then A, then C, then C, END
+    } else if(desc.innerHTML.indexOf("AUDACITY") >= -1 && i == 4){
+      desc.innerHTML = descArray[18];
+      a.innerHTML = "";
+      b.innerHTML = "";
+      c.innerHTML = "";
+
+  }
+
+    document.querySelector(".optionA").addEventListener("click", function(){
+      chooseA();
+      i++;
+    });
+    b.addEventListener("click", function(){
+      chooseB();
+      i++;
+    });
+    c.addEventListener("click", function(){
+      chooseC();
+      i++;
+    });
+  </script>
+</html>
