@@ -126,21 +126,31 @@
     bgName[8]= "cringe.png"
     bgName[9]= "foot.png"
     bgName[10]= "baljeet.png"
-    bgName[]=
-    bgName[]=
-    bgName[]=
-    bgName[]=
-    bgName[]=
-    bgName[]=
-    bgName[]=
-    bgName[]=
-    bgName[]=
-    bgName[]=
-    bgName[]=
-    bgName[]=
-    bgName[]=
-    bgName[]=
-    bgName[]=
+    bgName[11]= "pricklepants"
+    bgName[12]= "roz.png"
+    bgName[13]= "bruce.png"
+    bgName[14]= "christraeger.png"
+    bgName[15]= "phineasferb.png"
+    bgName[16]= "buster.png"
+    bgName[17]= "babish.png"
+    bgName[18]= "collegestudent.png"
+    bgName[19]= "knope.png"
+    bgName[20]= "ben.png"
+    bgName[21]= "IronMan.png"
+    bgName[22]= "DrDoof.png"
+    bgName[23]= "cruella.png"
+    bgName[24]= "Yzma.png"
+    bgName[25]= "Perry.png"
+    bgName[26]= "PeterPanda.png"
+    bgName[27]= "DwightLackawanna.png"
+    bgName[28]= "angela.png"
+    bgName[29]= "andy.png"
+    bgName[30]= "dwightgrill.png"
+    bgName[31]= "threatmidnight.png"
+    bgName[32]= "fakedundie.png"
+    bgName[33]= "wrongPam.png"
+    bgName[34]= "chili.png"
+    bgName[35]= "weapons.png"
 
 
     function chooseA(){
@@ -150,7 +160,8 @@
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
-        bg.src = "";
+          // baljeet.png
+          bg.src = "bgName[10]";
         // i == 1 means you've already made 1 choice
         // Choose B, then A
       }else if(desc.innerHTML.indexOf("kitchen") >= -1 && i == 1){
@@ -158,67 +169,89 @@
         a.innerHTML = optA[1];
         b.innerHTML = optB[0];
         c.innerHTML = optC[4];
+          // kitchen.png
+          bg.src = "bgName[0]";
         // Choose C, then A, END
       }else if(desc.innerHTML.indexOf("watch") >= -1 && i == 1){
         desc.innerHTML = descArray[35];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          // pricklepants.png
+          bg.src = "bgName[11]";
         // Choose B, then A, then A, END
       } else if(desc.innerHTML.indexOf("BURST") >= -1 && i == 2){
         desc.innerHTML = descArray[32];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          // christraeger.png
+          bg.src = "bgName[14]";
         // Choose B, then C, then A, END
       } else if(desc.innerHTML.indexOf("cook") >= -1 && i == 2){
         desc.innerHTML = descArray[6];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          // collegestudent.png
+          bg.src = "bgName[18]";
         // Choose B, then C, then C, then A, END
       } else if(desc.innerHTML.indexOf("nourished") >= -1 && i == 3){
         desc.innerHTML = descArray[20];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          // knope.png
+          bg.src = "bgName[19]";
         // Choose B, then C, then C, then B, then A
       } else if(desc.innerHTML.indexOf("accessory") >= -1 && i == 4){
         desc.innerHTML = descArray[24];
         a.innerHTML = optA[6];
         b.innerHTML = optB[4];
         c.innerHTML = optC[9];
+          // weapons.png
+          bg.src = "bgName[35]";
         // Choose B, then C, then C, then B, then A, then A, END
       } else if(desc.innerHTML.indexOf("weapon") >= -1 && i == 5){
         desc.innerHTML = descArray[25];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          // perry.png
+          bg.src = "bgName[25]";
         // Choose B, then C, then C, then C, then A, END
       } else if(desc.innerHTML.indexOf("outfit") >= -1 && i == 4){
         desc.innerHTML = descArray[29];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          //DrDoof.png
+          bg.src = "bgName[22]";
         // Choose C, then C, then A
-      } else if(desc.innerHTML.indexOf("outfit") >= -1 && i == 2){
-        desc.innerHTML = descArray[29];
+      } else if(desc.innerHTML.indexOf("episode") >= -1 && i == 2){
+        desc.innerHTML = descArray[9];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          // "office.png"
+          bg.src = "bgName[5]";
         // Choose C, then C, then A, then A, END
       } else if(desc.innerHTML.indexOf("cringiest") >= -1 && i == 3){
         desc.innerHTML = descArray[13];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          // "angela.png"
+          bg.src = "bgName[28]";
         // Choose C, then C, then A, then C, then A, END
       } else if(desc.innerHTML.indexOf("AUDACITY") >= -1 && i == 4){
         desc.innerHTML = descArray[16];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
-
+          // "wrongPam.png"
+          bg.src = "bgName[33]";
+      }
     }
     // any function where B is the last choice
     function chooseB(){
@@ -230,76 +263,91 @@
         a.innerHTML = optA[4];
         b.innerHTML = optB[2];
         c.innerHTML = optC[7];
+          //"nourished.png"
+          bg.src = "bgName[4]";
         // Choose B, then B, END
       } else if(desc.innerHTML.indexOf("kitchen") >= -1 && i == 1){
         desc.innerHTML = descArray[4];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          //"bruce.png"
+          bg.src = "bgName[13]";
         // Choose B, then C, then B, END
       }else if(desc.innerHTML.indexOf("cook") >= -1 && i == 2){
         desc.innerHTML = descArray[7];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
-        // Choose B, then C, then B, END
-      }else if(desc.innerHTML.indexOf("cook") >= -1 && i == 2){
-        desc.innerHTML = descArray[7];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
+          //"babish.png"
+          bg.src = "bgName[17]";
         // Choose B, then C, then C, then B
       }else if(desc.innerHTML.indexOf("nourished") >= -1 && i == 3){
         desc.innerHTML = descArray[21];
         a.innerHTML = optA[5];
         b.innerHTML = optB[3];
         c.innerHTML = optC[8];
+          //
+          bg.src = "";
         // Choose B, then C, then C, then B, then B, END
       }else if(desc.innerHTML.indexOf("accessory") >= -1 && i == 4){
         desc.innerHTML = descArray[22];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          //
+          bg.src = "";
         // Choose B, then C, then C, then B, then A, then B, END
       }else if(desc.innerHTML.indexOf("weapon") >= -1 && i == 5){
         desc.innerHTML = descArray[26];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          //
+          bg.src = "";
         // Choose B, then C, then C, then C, then B, END
       }else if(desc.innerHTML.indexOf("outfit") >= -1 && i == 4){
         desc.innerHTML = descArray[30];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          //
+          bg.src = "";
         // Choose C, then B, END
       }else if(desc.innerHTML.indexOf("watch") >= -1 && i == 1){
         desc.innerHTML = descArray[8];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          //
+          bg.src = "";
         // Choose C, then C, then B, END
       }else if(desc.innerHTML.indexOf("best") >= -1 && i == 2){
         desc.innerHTML = descArray[10];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          //
+          bg.src = "";
         // Choose C, then C, then A, then B, END
       }else if(desc.innerHTML.indexOf("watch") >= -1 && i == 3){
         desc.innerHTML = descArray[14];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          //
+          bg.src = "";
         // Choose C, then C, then A, then C, then B, END
       }else if(desc.innerHTML.indexOf("AUDACITY") >= -1 && i == 4){
         desc.innerHTML = descArray[17];
         a.innerHTML = "";
         b.innerHTML = "";
         c.innerHTML = "";
+          //
+          bg.src = "";
       }
     }
 
-  }
   // any function where C is the last choice
   function chooseC(){
     if(desc.innerHTML.indexOf("night") >= -1 && i == 0){
@@ -358,18 +406,20 @@
       a.innerHTML = "";
       b.innerHTML = "";
       c.innerHTML = "";
-
+    }
   }
+
 
     document.querySelector(".optionA").addEventListener("click", function(){
       chooseA();
       i++;
     });
-    b.addEventListener("click", function(){
+    document.querySelector(".optionB").addEventListener("click", function(){
+      console.log("ohno");
       chooseB();
       i++;
     });
-    c.addEventListener("click", function(){
+    document.querySelector(".optionC").addEventListener("click", function(){
       chooseC();
       i++;
     });
