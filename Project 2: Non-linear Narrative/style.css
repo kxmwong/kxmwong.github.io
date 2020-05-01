@@ -3,7 +3,7 @@
   height:5vh;
   margin-top: 15vh;
   margin-left: 35%;
-  margin-right: 30%;
+  /*margin-right: 30%;*/
   padding: 50px;
   background-color: pink;
   z-index: 1;
@@ -11,32 +11,35 @@
 .optionA{
   width: 10vh;
   height:10vh;
-  margin-top: 40vh;
-  margin-left: 30vh;
+  position: absolute;
+  bottom: 50px;
+  left: 10%;
   padding: 50px;
   background-color: pink;
-  z-index: 0;
+  z-index: 1;
 
 }
 .optionB{
   width: 10vh;
   height:10vh;
-  margin-top: -20vh;
-  margin-left: 80vh;
+  position: absolute;
+  bottom: 50px;
+  left: 40%;
   position: absolute;
   padding: 50px;
   background-color: pink;
-  z-index: -1;
+  z-index: 1;
 
 }
 .optionC{
   width: 10vh;
   height:10vh;
-  margin-top: -20vh;
-  margin-left: 130vh;
+  position: absolute;
+  bottom: 50px;
+  right: 10%;
   padding: 50px;
   background-color: pink;
-  z-index: -2;
+  z-index: 1;
 
 }
 

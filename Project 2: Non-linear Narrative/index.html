@@ -4,12 +4,16 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
   </head>
   <body>
     <div class="content">
         <img id = "night"src="house.png" alt="">
 
         <div class="description">
+          WHAT ICONIC CHARACTER ARE YOU!
+          <br>
           It's late at night and you need something to do! You try to do your
           homework, but just can't seem to sit still. What are you going to do?
         </div>
@@ -35,7 +39,7 @@
     var b = document.querySelector(".optionB");
     var c = document.querySelector(".optionC");
     var bg = document.querySelector("#night");
-    var i = 0;
+    var index = 0;
 
     var descArray = new Array;
     descArray[0]= "Congratulations! You're Baljeet! A's for days baby.";
@@ -46,7 +50,7 @@
     descArray[5]="Okay, so what are you gonna cook?"
     descArray[6]="Congrats! You're a basic college student. We're all iconic in our own way."
     descArray[7]="You ARE Babish. Ain't nobody else got the time, money, or materials to do that recreationally."
-    descArray[8]="Roz. Don't forget to remind Wazowski that he didn't file his paperwork on time..."
+    descArray[8]="You're Roz. Don't forget to remind Wazowski that he didn't file his paperwork on time..."
     descArray[9]="Which episode of The Office is the best? (There IS a rigt answer.)"
     descArray[10]="WRONG. You are nothing."
     descArray[11]="WRONG. You'd get a Dundie for how un-iconic you are."
@@ -112,7 +116,7 @@
     optC[7]= "Commit a crime. It's late. Now is the perfect time to strike."
     optC[8]= "All the accessories, a high tech suit, hella gadgets, EVERYTHING."
     optC[9]= "Beets."
-    optC[10]= "An long purple dress that does not fit your old, wrinkly, body well. But hey,at least it comes with a matching purple headband."
+    optC[10]= "A long purple dress that does NOT fit your old, wrinkly, body well. But hey,at least it comes with a matching purple headband."
 
     var bgName = new Array;
     bgName[0]= "kitchen.png"
@@ -126,7 +130,7 @@
     bgName[8]= "cringe.png"
     bgName[9]= "foot.png"
     bgName[10]= "baljeet.png"
-    bgName[11]= "pricklepants"
+    bgName[11]= "pricklepants.png"
     bgName[12]= "roz.png"
     bgName[13]= "bruce.png"
     bgName[14]= "christraeger.png"
@@ -153,293 +157,499 @@
     bgName[35]= "weapons.png"
 
 
-    function chooseA(){
-      //if the text of the desc div has the word night in it and 0 choices have been made, change the desc to baljeet
-      if(desc.innerHTML.indexOf("night") >= -1 && i == 0){
-        desc.innerHTML = descArray[0];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          // baljeet.png
-          bg.src = "bgName[10]";
-        // i == 1 means you've already made 1 choice
-        // Choose B, then A
-      }else if(desc.innerHTML.indexOf("kitchen") >= -1 && i == 1){
-        desc.innerHTML = descArray[3];
-        a.innerHTML = optA[1];
-        b.innerHTML = optB[0];
-        c.innerHTML = optC[4];
-          // kitchen.png
-          bg.src = "bgName[0]";
-        // Choose C, then A, END
-      }else if(desc.innerHTML.indexOf("watch") >= -1 && i == 1){
-        desc.innerHTML = descArray[35];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          // pricklepants.png
-          bg.src = "bgName[11]";
-        // Choose B, then A, then A, END
-      } else if(desc.innerHTML.indexOf("BURST") >= -1 && i == 2){
-        desc.innerHTML = descArray[32];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          // christraeger.png
-          bg.src = "bgName[14]";
-        // Choose B, then C, then A, END
-      } else if(desc.innerHTML.indexOf("cook") >= -1 && i == 2){
-        desc.innerHTML = descArray[6];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          // collegestudent.png
-          bg.src = "bgName[18]";
-        // Choose B, then C, then C, then A, END
-      } else if(desc.innerHTML.indexOf("nourished") >= -1 && i == 3){
-        desc.innerHTML = descArray[20];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          // knope.png
-          bg.src = "bgName[19]";
-        // Choose B, then C, then C, then B, then A
-      } else if(desc.innerHTML.indexOf("accessory") >= -1 && i == 4){
-        desc.innerHTML = descArray[24];
-        a.innerHTML = optA[6];
-        b.innerHTML = optB[4];
-        c.innerHTML = optC[9];
-          // weapons.png
-          bg.src = "bgName[35]";
-        // Choose B, then C, then C, then B, then A, then A, END
-      } else if(desc.innerHTML.indexOf("weapon") >= -1 && i == 5){
-        desc.innerHTML = descArray[25];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          // perry.png
-          bg.src = "bgName[25]";
-        // Choose B, then C, then C, then C, then A, END
-      } else if(desc.innerHTML.indexOf("outfit") >= -1 && i == 4){
-        desc.innerHTML = descArray[29];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          //DrDoof.png
-          bg.src = "bgName[22]";
-        // Choose C, then C, then A
-      } else if(desc.innerHTML.indexOf("episode") >= -1 && i == 2){
-        desc.innerHTML = descArray[9];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          // "office.png"
-          bg.src = "bgName[5]";
-        // Choose C, then C, then A, then A, END
-      } else if(desc.innerHTML.indexOf("cringiest") >= -1 && i == 3){
-        desc.innerHTML = descArray[13];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          // "angela.png"
-          bg.src = "bgName[28]";
-        // Choose C, then C, then A, then C, then A, END
-      } else if(desc.innerHTML.indexOf("AUDACITY") >= -1 && i == 4){
-        desc.innerHTML = descArray[16];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          // "wrongPam.png"
-          bg.src = "bgName[33]";
+
+    var scenes = new Array;
+
+    scenes[0] = {
+      optAScene: 1,
+      optBScene: 2,
+      optCScene: 3
+    }
+
+    scenes[1] = {
+      desc: "Congratulations! You're Baljeet! A's for days baby.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "baljeet.png",
+      descPos: {
+        x: "10vw",
+        y: "25vh"
       }
+    }
+
+    scenes[2] = {
+      desc: "You go the kitchen. What do you grab to eat?",
+      optA: "Banana, granola, and yogurt, allllll mixed together!",
+      optB: "Chocolate cake!",
+      optC: "I'm cooking a FULL ON MEAL, BABY!",
+      back: "kitchen.png",
+      optAScene: 4,
+      optBScene: 5,
+      optCScene: 6
+    }
+
+    scenes[3] = {
+      desc: "What do you watch?",
+      optA: "I don't watch, I CREATE.",
+      optB: "YOU. I'm watching you... Always watching...",
+      optC: "The Office",
+      back: "TV.png",
+      optAScene: 7,
+      optBScene: 8,
+      optCScene: 9
+    }
+
+    scenes[4] = {
+      desc: "Wow, healthy! You get a BURST of energy from all this nutrition. What're you going to do with it?",
+      optA: "Might as well workout and go on a casual 10 mile run!",
+      optB: "Build a rocket... fight a mummy... climb up the Eiffel Tower... discover something that doesn't exist... or give a monkey a shower?",
+      optC: "Pull up to your best friend Arthur's house with matching slippers because you feel bad for stealing a fossil from the museum you visted on your class field trip and need a best friend's advice. ",
+      back: "granola.png",
+      optAScene: 10,
+      optBScene: 11,
+      optCScene: 12
+    }
+
+    scenes[5] = {
+      desc: "You're Bruce Bogtrotter. I can't believe you really ate the whole cake.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "bruce.png",
+      descPos: {
+        x: "10vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[6] = {
+      desc: "Okay, so what are you gonna cook?",
+      optA: "PASTA, BABY",
+      optB: "I'm going to watch an episode of Binging with Babish and recreate the 'Kung Fu Panda Secret Ingredient Noodle Soup' with my own bare hands! https://www.youtube.com/watch?v=cee6883w2Nk",
+      optC: "Tomato and Egg Stir-fry (it's a chinese thing :))",
+      back: "cook.png",
+      optAScene: 13,
+      optBScene: 14,
+      optCScene: 15
+    }
+
+    scenes[7] = {
+      desc: "You're Mr. Pricklepants! Unlike these other toys, you've been classically trained in acting.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "pricklepants.png",
+      descPos: {
+        x: "60vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[8] = {
+      desc: "You're Roz. Don't forget to remind Wazowski that he didn't file his paperwork on time...",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "roz.png",
+      descPos: {
+        x: "60vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[9] = {
+      desc: "Which episode of The Office is the best? (There IS a rigt answer.)",
+      optA: "Dinner Party",
+      optB: "Threat Level Midnight",
+      optC: "The Dundies",
+      back: "office.png",
+      optAScene: 16,
+      optBScene: 17,
+      optCScene: 18
+    }
+
+    scenes[10] = {
+      desc: "You're Chris Traeger! Your body is a microchip. It cannot be compromised. You've run 10 miles a day, every day, for 18 years. That's 65,000 miles. A third of the way to the Moon. Your goal is to run to the moon.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "christraeger.png",
+      descPos: {
+        x: "60vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[11] = {
+      desc: "You're Phineas and Ferb! Hey? Where's Perry?",
+      optA: "",
+      optB: "",
+      optC: "",
+      back:"phineasferb.png",
+      descPos: {
+        x: "10vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[12] = {
+      desc: "You're Buster!!! Aw, look at the cute little friendship you guys have.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "buster.png",
+      descPos: {
+        x: "10vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[13] = {
+      desc: "Congrats! You're a basic college student. We're all iconic in our own way.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "collegestudent.png",
+      descPos: {
+        x: "10vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[14] = {
+      desc: "You ARE Babish. Ain't nobody else got the time, money, or materials to do that recreationally.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "babish.png",
+      descPos: {
+        x: "10vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[15] = {
+      desc: "Okay, now that you feel nourished, what are you gonna do?",
+      optA: "Go back and finish my work!",
+      optB: "Fight crime. It's late. Now is the perfect time to strike.",
+      optC: "Commit a crime. It's late. Now is the perfect time to strike.",
+      back: "nourished.png",
+      optAScene: 19,
+      optBScene: 20,
+      optCScene: 21
+    }
+
+    scenes[16] = {
+      desc: "Hmmmmm... ok you SEEM to have good taste and really know The Office. But NOW THIS IS A TEST. PROVE YOU ARE WORTHY OF THE SHOW. What was the cringiest couple in the show?",
+      optA: "Oscar Martinez and Robert Lipton (aka ~The Senator~)",
+      optB: "Gabe Lewis and Erin Hannon",
+      optC: "Michael Scott and Helene Beesly",
+      back: "cringe.png",
+      optAScene: 22,
+      optBScene: 23,
+      optCScene: 24
+    }
+
+    scenes[17] = {
+      desc: "WRONG. You are nothing.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "threatmidnight.png",
+      descPos: {
+        x: "10vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[18] = {
+      desc: "WRONG. You'd get a Dundie for how un-iconic you are.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "fakedundie.png",
+      descPos: {
+        x: "60vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[19] = {
+      desc: "Yep, you're Leslie Knope. It's late as hell, but you don't need more than 2 minutes of sleep. You have SO MUCH FUN WORK TO DO!!!",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "knope.png",
+      descPos: {
+        x: "60vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[20] = {
+      desc: "What accessory do you bring?",
+      optA: "A fedora.",
+      optB: "A fancy lil' watch-gadget-thingy.",
+      optC: "All the accessories, a high tech suit, hella gadgets, EVERYTHING.",
+      back: "gadget.png",
+      optAScene: 25,
+      optBScene: 26,
+      optCScene: 27
+    }
+
+    scenes[21] = {
+      desc: "First you must pick your outfit! What do you choose?",
+      optA: "A lab coat.",
+      optB: "The skin of your enemies.",
+      optC: "A long purple dress that does NOT fit your old, wrinkly, body well. But hey,at least it comes with a matching purple headband.",
+      back: "villain.png",
+      optAScene: 28,
+      optBScene: 29,
+      optCScene: 30
+    }
+
+    scenes[22] = {
+      desc: "You're Angle Martin. You're just jealous of Oscar and the Senator's love.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "angela.png",
+      descPos: {
+        x: "10vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[23] = {
+      desc: "You're Andy Bernard. Are you angry that Gabe stole your girlfriend over the summer? No! You've been through anger management...",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "andy.png",
+      descPos: {
+        x: "60vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[24] = {
+      desc: "CORRECT; The AUDACITY of Michael to date Pam's MOTHER???? DISGUSTING. Final test: How did Michael burn his foot?",
+      optA: "Running across hot coals during your branch's retreat because everyone in the office dared you to.",
+      optB: "Spilled boiling chili on his foot during dinner.",
+      optC: "Stepped on a grill he keeps next to his bed while it was cooking bacon.",
+      back: "foot.png",
+      optAScene: 31,
+      optBScene: 32,
+      optCScene: 33
+    }
+
+    scenes[25] = {
+      desc: "What is your weapon of choice?",
+      optA: "Your beaver tail.",
+      optB: "Your fuzzy lil' bear paws.",
+      optC: "Beets.",
+      back: "weapons.png",
+      optAScene: 34,
+      optBScene: 35,
+      optCScene: 36
+    }
+
+    scenes[26] = {
+      desc: "IT STARTED WHEN AN ALIEN DEVICE DID WHAT IT DID, AND STUCK ITSELF UPON HIS WRIST WITH SECRETS THAT IT HID. NOW HE'S GOT SUPER POWERS, HE'S NO ORDINARY KID. HE'S BEN 10.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "ben.png",
+      descPos: {
+        x: "10vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[27] = {
+      desc: "You're definitely Iron Man. Genius, billionaire, playboy, philanthropist.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "IronMan.png",
+      descPos: {
+        x: "60vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[28] = {
+      desc: "You're Dr. Doofenschmirtz! Doofenschmirtz evil incorporrraaaattteeeeeedd!!!",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "DrDoof.png",
+      descPos: {
+        x: "10vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[29] = {
+      desc: "You're Cruella de Vil. You really be skinning those dogs for your ugly jacket...",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "cruella.png",
+      descPos: {
+        x: "60vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[30] = {
+      desc: "You're Yzma.... You're so old and wrinkly you're living proof that dinosaurs once roamed the earth. Bleh.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "Yzma.png",
+      descPos: {
+        x: "10vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[31] = {
+      desc: "WRONG. That was PAM you idiot. No iconic character for you, booooooo.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "wrongPam.png",
+      descPos: {
+        x: "60vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[32] = {
+      desc: "WRONG, that wasn't even a REAL SCENE. Oh what's that? You HAVEN'T watched The Office fully through at least 6 times and do remember every single scene? UNICONIC.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "chili.png",
+      descPos: {
+        x: "60vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[33] = {
+      desc: "YES! You are Dwight Schrute. No one knows Michael better than you. Not even Holly.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "dwightgrill.png",
+      descPos: {
+        x: "60vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[34] = {
+      desc: "*cue theme song* PERRY!!! HE'S A SEMIAQUATIC EGG LAYIN' MAMMAL OF ACTION, HE'S A FURRY LITTLE FLATFOOR WHO'LL NEVER FLINCH FROM A FRA-EEAY-EEAYYY",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "Perry.png",
+      descPos: {
+        x: "10vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[35] = {
+      desc: "You're Peter the Panda!",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "PeterPanda.png",
+      descPos: {
+        x: "60vw",
+        y: "25vh"
+      }
+    }
+
+    scenes[36] = {
+      desc: "You're Dwight Shrute. Lackawanna County volunteer sheriff's deputy at your service.",
+      optA: "",
+      optB: "",
+      optC: "",
+      back: "DwightLackawanna.png",
+      descPos: {
+        x: "10vw",
+        y: "25vh"
+      }
+    }
+
+    function chooseA(){
+      console.log("hello scene A");
+      index = scenes[index].optAScene;
+      loadScene();
     }
     // any function where B is the last choice
     function chooseB(){
-      if(desc.innerHTML.indexOf("night") >= -1 && i == 0){
-        desc.innerHTML = descArray[1];
-        // Choose B, then C, then C, then B
-      } else if(desc.innerHTML.indexOf("nourished") >= -1 && i == 3){
-        desc.innerHTML = descArray[19];
-        a.innerHTML = optA[4];
-        b.innerHTML = optB[2];
-        c.innerHTML = optC[7];
-          //"nourished.png"
-          bg.src = "bgName[4]";
-        // Choose B, then B, END
-      } else if(desc.innerHTML.indexOf("kitchen") >= -1 && i == 1){
-        desc.innerHTML = descArray[4];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          //"bruce.png"
-          bg.src = "bgName[13]";
-        // Choose B, then C, then B, END
-      }else if(desc.innerHTML.indexOf("cook") >= -1 && i == 2){
-        desc.innerHTML = descArray[7];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          //"babish.png"
-          bg.src = "bgName[17]";
-        // Choose B, then C, then C, then B
-      }else if(desc.innerHTML.indexOf("nourished") >= -1 && i == 3){
-        desc.innerHTML = descArray[21];
-        a.innerHTML = optA[5];
-        b.innerHTML = optB[3];
-        c.innerHTML = optC[8];
-          //"gadget.png"
-          bg.src = "bgName[6]";
-        // Choose B, then C, then C, then B, then B, END
-      }else if(desc.innerHTML.indexOf("accessory") >= -1 && i == 4){
-        desc.innerHTML = descArray[22];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          //"ben.png"
-          bg.src = "bgName[20]";
-        // Choose B, then C, then C, then B, then A, then B, END
-      }else if(desc.innerHTML.indexOf("weapon") >= -1 && i == 5){
-        desc.innerHTML = descArray[26];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          //"PeterPanda.png"
-          bg.src = "bgName[26]";
-        // Choose B, then C, then C, then C, then B, END
-      }else if(desc.innerHTML.indexOf("outfit") >= -1 && i == 4){
-        desc.innerHTML = descArray[30];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          //"cruella.png"
-          bg.src = "bgName[23]";
-        // Choose C, then B, END
-      }else if(desc.innerHTML.indexOf("watch") >= -1 && i == 1){
-        desc.innerHTML = descArray[8];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          //"roz.png"
-          bg.src = "bgName[12]";
-        // Choose C, then C, then B, END
-      }else if(desc.innerHTML.indexOf("best") >= -1 && i == 2){
-        desc.innerHTML = descArray[10];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          //"threatmidnight.png"
-          bg.src = "bgName[31]";
-        // Choose C, then C, then A, then B, END
-      }else if(desc.innerHTML.indexOf("watch") >= -1 && i == 3){
-        desc.innerHTML = descArray[14];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          //"andy.png"
-          bg.src = "bgName[29]";
-        // Choose C, then C, then A, then C, then B, END
-      }else if(desc.innerHTML.indexOf("AUDACITY") >= -1 && i == 4){
-        desc.innerHTML = descArray[17];
-        a.innerHTML = "";
-        b.innerHTML = "";
-        c.innerHTML = "";
-          //"chili.png"
-          bg.src = "bgName[34]";
-      }
+      index = scenes[index].optBScene;
+      loadScene();
     }
 
   // any function where C is the last choice
   function chooseC(){
-    if(desc.innerHTML.indexOf("night") >= -1 && i == 0){
-      desc.innerHTML = descArray[1];
-      // Choose B, then C
-    } else if(desc.innerHTML.indexOf("kitchen") >= -1 && i == 1){
-      desc.innerHTML = descArray[5];
-      a.innerHTML = optA[2];
-      b.innerHTML = optB[1];
-      c.innerHTML = optC[6];
-        //"cook.png"
-        bg.src = "bgName[2]";
-      // Choose B, then C, then C
-    } else if(desc.innerHTML.indexOf("cook") >= -1 && i == 2){
-      desc.innerHTML = descArray[19];
-      a.innerHTML = optA[4];
-      b.innerHTML = optB[2];
-      c.innerHTML = optC[7];
-        //"nourished.png"
-        bg.src ="bgName[4]" ;
-      // Choose B, then C, then C, then C
-    } else if(desc.innerHTML.indexOf("nourished") >= -1 && i == 3){
-      desc.innerHTML = descArray[28];
-      a.innerHTML = optA[7];
-      b.innerHTML = optB[5];
-      c.innerHTML = optC[10];
-        //"villain.png"
-        bg.src ="bgName[7]" ;
-      // Choose B, then C, then C, then C, then C, END
-    } else if(desc.innerHTML.indexOf("outfit") >= -1 && i == 4){
-      desc.innerHTML = descArray[31];
-      a.innerHTML = "";
-      b.innerHTML = "";
-      c.innerHTML = "";
-        //"Yzma.png"
-        bg.src ="bgName[24]" ;
-      // Choose B, then C, then C, then B, then C, END
-    } else if(desc.innerHTML.indexOf("accessory") >= -1 && i == 4){
-      desc.innerHTML = descArray[23];
-      a.innerHTML = "";
-      b.innerHTML = "";
-      c.innerHTML = "";
-        //"IronMan.png"
-        bg.src ="bgName[21]" ;
-      // Choose C, then C
-    } else if(desc.innerHTML.indexOf("watch") >= -1 && i == 1){
-      desc.innerHTML = descArray[9];
-      a.innerHTML = optA[8];
-      b.innerHTML = optB[8];
-      c.innerHTML = optC[1];
-        //"office.png"
-        bg.src ="bgName[5]" ;
-      // Choose C, then C, then A, then C
-    } else if(desc.innerHTML.indexOf("cringiest") >= -1 && i == 3){
-      desc.innerHTML = descArray[15];
-      a.innerHTML = optA[10];
-      b.innerHTML = optB[10];
-      c.innerHTML = optC[3];
-        //"cringe.png"
-        bg.src ="bgName[8]";
-      // Choose C, then C, then C, END
-    } else if(desc.innerHTML.indexOf("episode") >= -1 && i == 2){
-      desc.innerHTML = descArray[11];
-      a.innerHTML = "";
-      b.innerHTML = "";
-      c.innerHTML = "";
-        //"fakedundie.png"
-        bg.src ="bgName[32]" ;
-      // Choose C, then C, then A, then C, then C, END
-    } else if(desc.innerHTML.indexOf("AUDACITY") >= -1 && i == 4){
-      desc.innerHTML = descArray[18];
-      a.innerHTML = "";
-      b.innerHTML = "";
-      c.innerHTML = "";
-        //"dwightgrill.png"
-        bg.src ="bgName[30]" ;
-    }
+    index = scenes[index].optCScene;
+    loadScene();
   }
 
+  function loadScene() {
+    console.log(index);
+    if(scenes[index].descPos){
+      $(".description").css("margin-top", scenes[index].descPos.y);
+      $(".description").css("margin-left", scenes[index].descPos.x);
+      console.log("moving");
+    } else {
+      $(".description").css("margin-top", "15vh");
+      $(".description").css("margin-left", "35%");
+    }
 
-    document.querySelector(".optionA").addEventListener("click", function(){
-      chooseA();
-      i++;
-    });
-    document.querySelector(".optionB").addEventListener("click", function(){
-      console.log("ohno");
-      chooseB();
-      i++;
-    });
-    document.querySelector(".optionC").addEventListener("click", function(){
-      chooseC();
-      i++;
-    });
+    $(".description").html(scenes[index].desc);
+    if(scenes[index].optA == ""){
+        $(".optionA").remove();
+    } else{
+        $(".optionA").html(scenes[index].optA);
+    }
+    if(scenes[index].optB == ""){
+        $(".optionB").remove();
+    } else{
+
+      $(".optionB").html(scenes[index].optB);
+    }
+
+    if(scenes[index].optC == ""){
+        $(".optionC").remove();
+    } else{
+      $(".optionC").html(scenes[index].optC);
+    }
+    $("#night").attr("src", scenes[index].back);
+  }
+  $(".optionA").click(function(){
+    chooseA();
+    console.log("opt A");
+  });
+
+  $(".optionB").click(function(){
+    chooseB();
+    console.log("opt B");
+  });
+
+  $(".optionC").click(function(){
+    chooseC();
+  });
+
+
+
   </script>
 </html>
